@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4282f4</color>
+    <color name="colorPrimaryDark">#00000000</color>
+    <color name="colorAccent">#4282f4</color>
+
+    <color name="text_main">#4282f4</color>
+    <color name="text_accent">#f86734</color>
+    <color name="text_surface">#333333</color>
+    <color name="text_surface_alpha">#88333333</color>
+    <color name="text_second">#666666</color>
+    <color name="text_third">#999999</color>
+    <color name="text_invert">#ffffff</color>
+    <color name="text_invert_alpha">#88ffffff</color>
+    <color name="text_on_main">#ffffff</color>
+
+    <color name="foreground_top">#f5f5f5</color>
+</resources>

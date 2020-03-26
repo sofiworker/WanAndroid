@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/article_item">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_is_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/text_notes"
+            android:visibility="gone"
+            android:text="@string/is_new"/>
+        <TextView
+            android:id="@+id/tv_article_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tv_is_new"
+            android:textSize="@dimen/text_notes"
+            android:layout_marginStart="@dimen/article_item_note"/>
+        <TextView
+            android:id="@+id/tv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tv_article_author"
+            android:background="@drawable/article_tag_bg"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/article_item_note"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/text_time"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tv_article_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/text_third"
+            android:textSize="@dimen/text_notes"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/article_item_note">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_article_cover"
+            android:scaleType="centerCrop"
+            android:layout_width="120dp"
+            android:layout_height="80dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp">
+            <TextView
+                android:id="@+id/tv_article_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:textColor="@color/text_surface"
+                android:textSize="@dimen/text_content"/>
+
+            <TextView
+                android:id="@+id/tv_article_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:textColor="@color/text_second"
+                android:visibility="gone"
+                android:textSize="@dimen/text_auxiliary"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/article_item_note">
+
+        <TextView
+            android:id="@+id/tv_is_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_accent"
+            android:layout_marginStart="@dimen/article_item_note"
+            android:textSize="@dimen/text_notes"
+            android:text="@string/is_top"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tv_chapter_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tv_is_top"
+            android:layout_marginStart="@dimen/article_item_note"
+            android:textSize="@dimen/text_notes"/>
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentEnd="true"/>-->
+    </RelativeLayout>
+</LinearLayout>
