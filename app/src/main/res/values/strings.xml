@@ -16,6 +16,7 @@
     <string name="error">好像出了什么错误，请稍后试试</string>
 
     <string name="author_unknown">作者未知</string>
+    <string name="unknown_time">未知时间</string>
 
     <string name="navigation">导航</string>
     <string name="is_new">新</string>
@@ -25,4 +26,25 @@
         <item>体系</item>
         <item>导航</item>
     </string-array>
+
+    <string name="my_integral">我的积分</string>
+    <string name="my_share">我的分享</string>
+    <string name="my_collect">我的收藏</string>
+    <string name="read_later">稍后阅读</string>
+    <string name="read_history">阅读历史</string>
+    <string name="open_project">开源项目</string>
+    <string name="about_developer">关于作者</string>
+    <string name="setting">系统设置</string>
+
+    <string name="search">搜索</string>
+
+    <string name="search_something">搜点什么吧~</string>
+
+    <string name="hot_search">热门搜索</string>
+    <string name="search_history">搜索历史</string>
+    <string name="clear_all">清除全部</string>
+
+    <string name="write_something">写点什么吧~</string>
+
+    <string name="clear_all_history">是否清除所有搜索历史记录</string>
 </resources>

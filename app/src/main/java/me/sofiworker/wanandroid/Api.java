@@ -8,10 +8,14 @@ import me.sofiworker.wanandroid.fragment.home.Article;
 import me.sofiworker.wanandroid.fragment.home.ArticlePage;
 import me.sofiworker.wanandroid.fragment.home.BannerData;
 import me.sofiworker.wanandroid.fragment.project.Project;
+import me.sofiworker.wanandroid.fragment.search.HotKey;
 import me.sofiworker.wanandroid.fragment.system.knowledge.Knowledge;
 import me.sofiworker.wanandroid.fragment.system.navigation.Navigation;
 import me.sofiworker.wanandroid.fragment.wechat.Wechat;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
@@ -51,4 +55,11 @@ public interface Api {
 
     @GET("/article/list/{pageNum}/json")
     Observable<BaseData<ArticlePage>> getSubsystemArticleList(@Path("pageNum") int pageNum, @Query("cid") int cid);
+
+    @GET("/hotkey/json")
+    Observable<BaseData<List<HotKey>>> getHotKeyList();
+
+    @FormUrlEncoded
+    @POST("/article/query/{pageNum}/json")
+    Observable<BaseData<ArticlePage>> searchArticle(@Path("pageNum") int pageNum, @Field("k") String keyWorld);
 }

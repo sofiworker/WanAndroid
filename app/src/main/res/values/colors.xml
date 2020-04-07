@@ -14,5 +14,8 @@
     <color name="text_invert_alpha">#88ffffff</color>
     <color name="text_on_main">#ffffff</color>
 
+    <color name="accent">#f86734</color>
+
+    <color name="invert_alpha">#11000000</color>
     <color name="foreground_top">#f5f5f5</color>
 </resources>

@@ -1,12 +1,8 @@
 package me.sofiworker.wanandroid.base;
 
-import com.tamsiree.rxkit.RxTool;
 import com.tamsiree.rxkit.view.RxToast;
 
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
 import io.reactivex.observers.ResourceObserver;
-import me.sofiworker.wanandroid.R;
 import me.sofiworker.wanandroid.util.LogUtil;
 
 /**
@@ -26,7 +22,6 @@ public abstract class BaseObserver<T> extends ResourceObserver<BaseData<T>> {
 
     @Override
     protected void onStart() {
-
     }
 
     @Override
@@ -49,7 +44,6 @@ public abstract class BaseObserver<T> extends ResourceObserver<BaseData<T>> {
 
     @Override
     public void onComplete() {
-
     }
 
     /**

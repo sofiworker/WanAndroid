@@ -22,7 +22,7 @@ public class HomePresenter extends BasePresenter<HomeContract.View> implements H
 
     @Override
     public void loadBanner() {
-        addDisposable(mApi.getBanner().compose(RxUtil.changeRxThread()).subscribeWith(new BaseObserver<List<BannerData>>(mView) {
+        addDisposable(mApi.getBanner().compose(RxUtil.changeRxThread()).subscribeWith(new BaseObserver<List<BannerData>>() {
             @Override
             protected void onSuccess(List<BannerData> data) {
                 if (data.isEmpty()) {

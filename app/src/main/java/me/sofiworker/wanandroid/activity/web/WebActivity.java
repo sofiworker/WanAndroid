@@ -10,7 +10,6 @@ import me.sofiworker.wanandroid.R;
 import me.sofiworker.wanandroid.base.BaseActivity;
 import me.sofiworker.wanandroid.fragment.home.Article;
 import me.sofiworker.wanandroid.fragment.home.BannerData;
-import me.sofiworker.wanandroid.util.LogUtil;
 
 /**
  * @author sofiworker
@@ -41,12 +40,6 @@ public class WebActivity extends BaseActivity {
             url = article.getLink();
         }
         createWeb(url);
-//        if (mAgentWeb == null){
-//            LogUtil.d("webview为空");
-//        }else {
-//            LogUtil.d("webview不为空");
-//            mAgentWeb.getUrlLoader().loadUrl(url);
-//        }
     }
 
     private void createWeb(String url) {

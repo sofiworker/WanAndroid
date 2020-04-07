@@ -4,12 +4,46 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.Toolbar
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
-        android:background="@color/colorPrimary">
+        android:background="@color/colorPrimary"
+        android:gravity="center">
 
-    </androidx.appcompat.widget.Toolbar>
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@null"/>
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="6"
+            android:hint="@string/search_something"
+            android:textColor="@color/text_on_main"
+            android:textColorHint="@color/text_invert_alpha"
+            android:background="@drawable/bg_search"
+            android:layout_gravity="center"
+            android:inputType="text"
+            android:autofillHints="string" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:text="@string/search"
+            android:textSize="18sp"
+            android:textColor="@color/text_on_main"/>
+    </LinearLayout>
 
     <FrameLayout
         android:id="@+id/fl_search"

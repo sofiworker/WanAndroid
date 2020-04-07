@@ -30,8 +30,8 @@ public class CommonRvAdapter extends BaseQuickAdapter<Article, BaseViewHolder> i
     protected void convert(BaseViewHolder viewHolder, Article article) {
         viewHolder.setText(R.id.tv_article_author, !TextUtils.isEmpty(article.getAuthor()) ? article.getAuthor() :
                 !TextUtils.isEmpty(article.getShareUser()) ? article.getShareUser() : getContext().getString(R.string.author_unknown))
-                .setText(R.id.tv_article_time, article.getNiceShareDate())
-                .setText(R.id.tv_chapter_name, article.getSuperChapterName() + "·" + article.getChapterName());
+                .setText(R.id.tv_article_time, article.getNiceShareDate().equals(getContext().getString(R.string.unknown_time)) ? article.getNiceDate() : article.getNiceShareDate())
+                .setText(R.id.tv_chapter_name, article.getSuperChapterName() + "·" + HtmlCompat.fromHtml(article.getChapterName(), HtmlCompat.FROM_HTML_MODE_COMPACT).toString());
         if (article.isFresh()) {
             viewHolder.setVisible(R.id.tv_is_new, true);
         }else {
@@ -51,16 +51,18 @@ public class CommonRvAdapter extends BaseQuickAdapter<Article, BaseViewHolder> i
         }
         if (article.getTags() != null && !article.getTags().isEmpty()) {
             viewHolder.getView(R.id.tv_tag).setVisibility(View.VISIBLE);
-            viewHolder.setText(R.id.tv_tag, article.getTags().get(0).getName());
+            String tag = HtmlCompat.fromHtml(article.getTags().get(0).getName(), HtmlCompat.FROM_HTML_MODE_COMPACT).toString();
+            viewHolder.setText(R.id.tv_tag, tag);
         }else {
             viewHolder.getView(R.id.tv_tag).setVisibility(View.GONE);
         }
         if (!article.getEnvelopePic().isEmpty()) {
             viewHolder.setVisible(R.id.iv_article_cover, true);
-            viewHolder.getView(R.id.iv_article_cover).setTag(article.getEnvelopePic());
-            if (TextUtils.equals((String)viewHolder.getView(R.id.iv_article_cover).getTag(), article.getEnvelopePic())) {
-                Glide.with(getContext()).load(article.getEnvelopePic()).into((ImageView) viewHolder.getView(R.id.iv_article_cover));
-            }
+            Glide.with(getContext())
+                    .load(article.getEnvelopePic())
+                    .error(R.drawable.crash_logo)
+                    .placeholder(R.drawable.ic_launcher_background)
+                    .into((ImageView) viewHolder.getView(R.id.iv_article_cover));
         }else {
             viewHolder.getView(R.id.iv_article_cover).setVisibility(View.GONE);
         }

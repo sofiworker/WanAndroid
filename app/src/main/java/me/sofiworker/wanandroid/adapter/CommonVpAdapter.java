@@ -23,6 +23,11 @@ public class CommonVpAdapter extends FragmentStatePagerAdapter {
         notifyDataSetChanged();
     }
 
+    public void addFragment(BaseFragment baseFragment) {
+        this.mFragmentList.add(baseFragment);
+        notifyDataSetChanged();
+    }
+
     public CommonVpAdapter(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
     }
