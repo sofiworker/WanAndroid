@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -75,7 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_coin"
-                android:tint="@color/colorPrimary"
+                app:tint="@color/colorPrimary"
                 android:contentDescription="@null"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -92,7 +93,7 @@
                 android:contentDescription="@null"
                 android:rotation="180"
                 android:src="@drawable/ic_back"
-                android:tint="@color/colorPrimary"/>
+                app:tint="@color/colorPrimary"/>
         </FrameLayout>
 
         <FrameLayout
@@ -106,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_share_article"
-                android:tint="@color/colorPrimary"
+                app:tint="@color/colorPrimary"
                 android:contentDescription="@null"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -120,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_back"
                 android:rotation="180"
-                android:tint="@color/colorPrimary"
+                app:tint="@color/colorPrimary"
                 android:contentDescription="@null"
                 android:layout_gravity="end"/>
         </FrameLayout>
@@ -136,7 +137,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_collect"
-                android:tint="@color/colorPrimary"
+                app:tint="@color/colorPrimary"
                 android:contentDescription="@null"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -150,9 +151,9 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_back"
                 android:rotation="180"
-                android:tint="@color/colorPrimary"
                 android:contentDescription="@null"
-                android:layout_gravity="end"/>
+                android:layout_gravity="end"
+                app:tint="@color/colorPrimary" />
         </FrameLayout>
         <FrameLayout
             android:layout_width="match_parent"
@@ -165,7 +166,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_read_later"
-                android:tint="@color/colorPrimary"
+                app:tint="@color/colorPrimary"
                 android:scaleType="centerInside"
                 android:contentDescription="@null"/>
             <TextView
@@ -179,7 +180,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_back"
                 android:rotation="180"
-                android:tint="@color/colorPrimary"
+                app:tint="@color/colorPrimary"
                 android:contentDescription="@null"
                 android:layout_gravity="end"/>
         </FrameLayout>
@@ -195,7 +196,7 @@
                 android:layout_height="match_parent"
                 android:contentDescription="@null"
                 android:src="@drawable/ic_github"
-                android:tint="@color/colorPrimary" />
+                app:tint="@color/colorPrimary" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -207,7 +208,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_back"
                 android:rotation="180"
-                android:tint="@color/colorPrimary"
+                app:tint="@color/colorPrimary"
                 android:contentDescription="@null"
                 android:layout_gravity="end"/>
         </FrameLayout>
@@ -222,7 +223,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_about"
-                android:tint="@color/colorPrimary"
+                app:tint="@color/colorPrimary"
                 android:contentDescription="@null"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -235,7 +236,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_back"
                 android:rotation="180"
-                android:tint="@color/colorPrimary"
+                app:tint="@color/colorPrimary"
                 android:contentDescription="@null"
                 android:layout_gravity="end"/>
         </FrameLayout>
@@ -251,7 +252,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_setting"
-                android:tint="@color/colorPrimary"
+                app:tint="@color/colorPrimary"
                 android:contentDescription="@null"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -264,7 +265,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_back"
                 android:rotation="180"
-                android:tint="@color/colorPrimary"
+                app:tint="@color/colorPrimary"
                 android:contentDescription="@null"
                 android:layout_gravity="end"/>
         </FrameLayout>

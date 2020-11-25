@@ -47,4 +47,9 @@
     <string name="write_something">写点什么吧~</string>
 
     <string name="clear_all_history">是否清除所有搜索历史记录</string>
+
+    <string name="login">登录</string>
+
+    <string name="account">账号</string>
+    <string name="password">密码</string>
 </resources>

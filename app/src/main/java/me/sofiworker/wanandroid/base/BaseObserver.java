@@ -30,6 +30,8 @@ public abstract class BaseObserver<T> extends ResourceObserver<BaseData<T>> {
             onSuccess(baseData.getData());
         }else if (baseData.getErrorCode() == -1001){
             // TODO: 2020/3/18 登录跳转
+        }else if (baseData.getErrorCode() == -1){
+            mView.showToast(baseData.getErrorMsg());
         }else {
             onFail(baseData.getErrorMsg());
         }

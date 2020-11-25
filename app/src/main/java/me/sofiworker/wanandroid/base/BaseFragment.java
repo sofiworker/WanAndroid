@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,7 +20,7 @@ import butterknife.Unbinder;
  * @version 1.0.0
  * @date 2020/3/18 19:20
  */
-public abstract class BaseFragment<T extends IPresenter> extends Fragment implements IView {
+public abstract class BaseFragment<T extends IPresenter<?>> extends Fragment implements IView {
 
     protected T mPresenter;
     protected View mRootView;
@@ -62,7 +63,7 @@ public abstract class BaseFragment<T extends IPresenter> extends Fragment implem
 
     @Override
     public void showToast(String msg) {
-
+        Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT).show();
     }
 
     @Override

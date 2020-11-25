@@ -7,6 +7,7 @@ import me.sofiworker.wanandroid.base.BaseData;
 import me.sofiworker.wanandroid.fragment.home.Article;
 import me.sofiworker.wanandroid.fragment.home.ArticlePage;
 import me.sofiworker.wanandroid.fragment.home.BannerData;
+import me.sofiworker.wanandroid.fragment.login.User;
 import me.sofiworker.wanandroid.fragment.project.Project;
 import me.sofiworker.wanandroid.fragment.search.HotKey;
 import me.sofiworker.wanandroid.fragment.system.knowledge.Knowledge;
@@ -62,4 +63,7 @@ public interface Api {
     @FormUrlEncoded
     @POST("/article/query/{pageNum}/json")
     Observable<BaseData<ArticlePage>> searchArticle(@Path("pageNum") int pageNum, @Field("k") String keyWorld);
+
+    @POST("/user/login")
+    Observable<BaseData<User>> userLogin(@Query("username") String username, @Query("password") String password);
 }

@@ -1,5 +1,7 @@
 package me.sofiworker.wanandroid.activity.main;
 
+import android.view.MenuItem;
+
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 

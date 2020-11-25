@@ -1,11 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="11111111111111111"/>
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_toolbar_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@null"/>
+    </androidx.appcompat.widget.Toolbar>
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="3"-->
+<!--        android:background="@color/colorPrimary">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="128dp"-->
+<!--            android:layout_height="128dp"-->
+<!--            android:src="@drawable/ic_logo"-->
+<!--            android:contentDescription="@null"-->
+<!--            android:layout_centerInParent="true"/>-->
+<!--    </RelativeLayout>-->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_login_register"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"/>
 </LinearLayout>
